@@ -1,4 +1,4 @@
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { Bounds, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Lights from "./components/Lights";
 import { RaymarchedScene } from "./Raymarching/RaymarchedScene";
@@ -16,6 +16,13 @@ export default function App() {
 
         <RaymarchedScene />
         <RegularScene />
+
+        <Bounds fit observe>
+          <mesh>
+            <boxGeometry args={[4, 4, 4]} />
+            <meshStandardMaterial color="orange" visible={false} />
+          </mesh>
+        </Bounds>
       </Canvas>
     </>
   );
