@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import Lights from "./components/Lights";
 import { RaymarchedScene } from "./Raymarching/RaymarchedScene";
 import { RegularScene } from "./RegularScene";
-import "./styles.css";
 
 export default function App() {
   return (
